@@ -40,8 +40,9 @@ public class Presentador {
     public void iniciarJuego(Usuario usuario){
         BancoPreguntas bancoPreguntas = new BancoPreguntas();
         Pregunta preguntaElegida;
+        boolean deseaContinuar = true;
 
-        for(int ronda=1; ronda <= cantidadRondas; ronda++){
+        for(int ronda=1 ; ronda <= cantidadRondas; ronda++){
             preguntaElegida = bancoPreguntas.obtenerPregunta(ronda);
             menu.mostrarMenuPregunta(preguntaElegida);
 
@@ -53,16 +54,22 @@ public class Presentador {
                 break;
             }
 
-            menu.menuDecidirContinuar();
-            Integer respuestaRetiro = Integer.parseInt(solicitarDato("Ingrese su respuesta: "));
-            boolean deseaContinuar = validarRespuestaRetiro(respuestaRetiro);
+            premioAcumulado += premioPorRonda;
+
+            if(ronda <  cantidadRondas){
+                menu.menuDecidirContinuar();
+                Integer respuestaRetiro = Integer.parseInt(solicitarDato("Ingrese su respuesta: "));
+                deseaContinuar = validarRespuestaRetiro(respuestaRetiro);
+            }
+
 
             if(!deseaContinuar){
                 break;
             }
 
-            premioAcumulado += premioPorRonda;
-
         }
+        System.out.println("El premio acumulado es: ");
+        System.out.println(premioAcumulado);
+
     }
 }
