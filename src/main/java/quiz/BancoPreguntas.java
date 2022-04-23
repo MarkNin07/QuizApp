@@ -16,6 +16,7 @@ public class BancoPreguntas {
 
     ));
 
+    // tODO: Aqui la idea es tener una pregunta al azar
     public Pregunta obtenerPregunta(Integer ronda){
         Pregunta preguntaElegida = preguntas.stream()
                 .filter(pregunta -> pregunta.getRonda() == ronda)

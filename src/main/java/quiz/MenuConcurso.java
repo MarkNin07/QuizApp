@@ -18,12 +18,15 @@ public class MenuConcurso implements Menu {
     @Override
     public void mostrarMenuPregunta(Pregunta pregunta) {
         System.out.println("La pregunta es: ");
-        System.out.println(pregunta.enunciado);
+        System.out.println(pregunta.getEnunciado());
         pregunta.imprimirOpcionesRespuesta();
     }
 
     @Override
-    public void menuDecidirRetirarse() {
+    public void menuDecidirContinuar() {
+        System.out.println("¿Desea continuar? ");
+        System.out.println("1. Si");
+        System.out.println("2. No");
 
     }
 

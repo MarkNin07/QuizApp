@@ -41,7 +41,7 @@ public class Presentador {
         BancoPreguntas bancoPreguntas = new BancoPreguntas();
         Pregunta preguntaElegida;
 
-        for(int ronda=0; ronda < cantidadRondas; ronda++){
+        for(int ronda=1; ronda <= cantidadRondas; ronda++){
             preguntaElegida = bancoPreguntas.obtenerPregunta(ronda);
             menu.mostrarMenuPregunta(preguntaElegida);
 
@@ -53,7 +53,7 @@ public class Presentador {
                 break;
             }
 
-            menu.menuDecidirRetirarse();
+            menu.menuDecidirContinuar();
             Integer respuestaRetiro = Integer.parseInt(solicitarDato("Ingrese su respuesta: "));
             boolean deseaContinuar = validarRespuestaRetiro(respuestaRetiro);
 

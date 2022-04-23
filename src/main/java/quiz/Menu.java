@@ -8,7 +8,7 @@ public interface Menu {
 
     void mostrarMenuPregunta(Pregunta preguntaElegida);
 
-    void menuDecidirRetirarse();
+    void menuDecidirContinuar();
 
     void mostrarPantallaTerminarJuego();
 }
