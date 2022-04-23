@@ -1,0 +1,14 @@
+package quiz;
+
+public interface Menu {
+
+    void mostrarMenuBienvenida();
+
+    void mostrarMenuPrincipal();
+
+    void mostrarMenuPregunta(Pregunta preguntaElegida);
+
+    void menuDecidirRetirarse();
+
+    void mostrarPantallaTerminarJuego();
+}
