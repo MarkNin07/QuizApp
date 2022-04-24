@@ -7,7 +7,7 @@ public class Presentador {
     Scanner obtenerInput = new Scanner(System.in);
     private final Integer cantidadRondas = 5;
     private final Integer premioPorRonda = 500;
-    private Integer premioAcumulado;
+    private Integer premioAcumulado = 0;
 
     private String solicitarDato(String mensaje){
         System.out.println(mensaje);
