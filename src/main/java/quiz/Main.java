@@ -1,32 +1,55 @@
 package quiz;
 
+import java.util.Scanner;
+
 public class Main {
+    static Presentador presentador = new Presentador();
+
+    static Reglas reglas = new Reglas();
+    static Integer opcionElegida = 1;
+
+    public static void desplegarMenu(){
+        do {
+            opcionElegida = presentador.mostrarMenuPrincipal();
+
+            switch (opcionElegida) {
+                case 1:
+                    presentador.iniciarJuego();
+                    break;
+                case 2:
+                    reglas.mostrarReglas();
+                    break;
+                case 3:
+                    System.out.println("Ver historial");
+                    presentador.getHistorialUsuarios();
+                    break;
+                default:
+                case 4:
+                    System.exit(0);
+                    break;
+            }
+
+        } while (!presentador.getTerminarJuego());
+    }
 
     public static void main(String[] args) {
-        Presentador presentador = new Presentador();
-        Usuario usuario;
+        while (true){
 
-        presentador.iniciarAplicacion();
-        String nombreUsuario = presentador.solicitarDatos();
-        usuario = new Usuario(nombreUsuario);
+            presentador.mostrarMenuInicial();
 
-        Integer opcionElegida = presentador.mostrarMenuPrincipal();
+            Scanner scanner = new Scanner(System.in);
+            Integer primeraOpcion = scanner.nextInt();
 
-        switch (opcionElegida){
-            case 1:
-                presentador.iniciarJuego(usuario);
+            if(primeraOpcion == 1){
+                presentador.solicitarDatos();
+                desplegarMenu();
+            }else if (primeraOpcion == 2) {
+                presentador.getHistorialUsuarios();
+            }else {
                 break;
-            case 2:
-                System.out.println("Ver historial");
-                break;
-            case 3:
-                System.out.println("Ver reglas del juego");
-                break;
-            default:
-            case 4:
-                System.exit(0);
-                break;
+            }
         }
+
     }
 
 }

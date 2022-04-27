@@ -6,10 +6,11 @@ public class Pregunta {
 
     private Integer ronda;
     private String enunciado;
-    private ArrayList <String> opcionesRespuesta;
+    private String[] opcionesRespuesta;
+    //private ArrayList <String> opcionesRespuesta;
     private String respuestaCorrecta;
 
-    public Pregunta(Integer ronda, String enunciado, ArrayList<String> opcionesRespuesta, String respuestaCorrecta){
+    public Pregunta(Integer ronda, String enunciado, String[] opcionesRespuesta, String respuestaCorrecta){
         this.ronda = ronda;
         this.enunciado = enunciado;
         this.opcionesRespuesta = opcionesRespuesta;
@@ -24,9 +25,15 @@ public class Pregunta {
         return enunciado;
     }
 
+
+    /*public String[] getOpcionesRespuesta() {
+        return opcionesRespuesta;
+    }*/
+
+    /*
     public ArrayList<String> getOpcionesRespuesta() {
         return opcionesRespuesta;
-    }
+    } */
 
     public String getRespuestaCorrecta() {
         return respuestaCorrecta;

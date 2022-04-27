@@ -28,10 +28,19 @@ public class MenuConcurso implements Menu {
         System.out.println("1. Si");
         System.out.println("2. No");
 
+
+    }
+    @Override
+    public void menuInicial(){
+        System.out.println("Bienvenido!");
+        System.out.println("Ingrese una de las siguientes opciones: ");
+        System.out.println("1. Ingresar usuario: ");
+        System.out.println("2. Ver puntaje historial: ");
+        System.out.println("3. Salir");
     }
 
-    @Override
+    /*@Override
     public void mostrarPantallaTerminarJuego() {
 
-    }
+    }  */
 }

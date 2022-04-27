@@ -10,5 +10,7 @@ public interface Menu {
 
     void menuDecidirContinuar();
 
-    void mostrarPantallaTerminarJuego();
+    void menuInicial();
+
+    //void mostrarPantallaTerminarJuego();
 }
