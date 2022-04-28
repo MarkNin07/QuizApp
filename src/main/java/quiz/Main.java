@@ -25,7 +25,7 @@ public class Main {
                     break;
             }
 
-        } while (!presentador.getTerminarJuego());
+        } while (presentador.getTerminarJuego() == false);
     }
 
     public static void main(String[] args) {

@@ -49,11 +49,13 @@ public class Presentador {
     }
 
     public void iniciarJuego(){
-        BancoPreguntas bancoPreguntas = new BancoPreguntas();
-        Pregunta preguntaElegida;
+        //BancoPreguntas bancoPreguntas = new BancoPreguntas();
+        //Pregunta preguntaElegida;
         boolean deseaContinuar = true;
 
         for(int ronda = 1 ; ronda <= this.cantidadRondas; ronda++){
+            BancoPreguntas bancoPreguntas = new BancoPreguntas();
+            Pregunta preguntaElegida;
             preguntaElegida = bancoPreguntas.obtenerPregunta(ronda);
             this.menu.mostrarMenuPregunta(preguntaElegida);
 
@@ -66,7 +68,7 @@ public class Presentador {
                 this.usuario.setEstado(EstadoUsuario.HA_PERDIDO);
                 this.terminarJuego = true;
                 this.historial.agregarUsuario(this.usuario);
-                usuario = new Usuario();
+                this.usuario = new Usuario();
                 break;
             }
 
@@ -87,7 +89,7 @@ public class Presentador {
                 this.terminarJuego = true;
                 this.usuarioRetirado = true;
                 this.historial.agregarUsuario(this.usuario);
-                usuario = new Usuario();
+                this.usuario = new Usuario();
                 break;
             }
         }
@@ -97,7 +99,7 @@ public class Presentador {
             System.out.println("El premio acumulado es: " + this.usuario.getPuntaje());
             this.usuario.setEstado(EstadoUsuario.HA_GANADO);
             this.historial.agregarUsuario(this.usuario);
-            usuario = new Usuario();
+            this.usuario = new Usuario();
         }
 
     }

@@ -1,7 +1,7 @@
 package quiz;
 
 public class Usuario {
-    //private final String nombreUsuario;
+
     private String nombreUsuario;
     private Integer puntaje = 0;
     private EstadoUsuario estado;

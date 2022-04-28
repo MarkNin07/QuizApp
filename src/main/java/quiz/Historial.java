@@ -13,6 +13,8 @@ public class Historial {
       public void agregarUsuario(Usuario usuario) {
           if (usuario.getNombreUsuario() != null) {
               this.listaDeJugadores.add(usuario);
+          }else{
+              System.out.println("Nombre de usuario nulo");
           }
       }
 

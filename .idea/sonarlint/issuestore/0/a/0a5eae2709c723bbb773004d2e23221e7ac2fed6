@@ -1,0 +1,20 @@
+
+s	java:S1358"YReduce the total number of break and continue statements in this loop to use at most one.(Ì¦É…úÿÿÿÿ
+E
+java:S5411a"*Use the primitive boolean expression here.(õ×ÑŞúÿÿÿÿ
+7
+java:S1170
+"!Make this final field static too.(ÌâÇÇ
+7
+java:S1170"!Make this final field static too.(ÙÉªñ
+S	java:S106"9Replace this use of System.out or System.err by a logger.(­ñüòûÿÿÿÿ
+]	java:S1254"<This block of commented-out lines of code should be removed.(Ø®ª÷ıÿÿÿÿ8Û²Œ‡0
+S	java:S106C"9Replace this use of System.out or System.err by a logger.(¬²¿¬øÿÿÿÿ
+M	java:S106W"9Replace this use of System.out or System.err by a logger.(ªôí
+I
+java:S1125a"'Remove the unnecessary boolean literal.(õ×ÑŞúÿÿÿÿ8 Î—æ†0
+N	java:S106c"9Replace this use of System.out or System.err by a logger.(¼Æ®
+d
+java:S1128"BRemove this unused import 'javax.swing.undo.AbstractUndoableEdit'.(ÑÂìùÿÿÿÿ8ÛÈğŒ‡0
+M
+java:S1128"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ8ÜÈğŒ‡0

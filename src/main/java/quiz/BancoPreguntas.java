@@ -8,7 +8,7 @@ import java.util.stream.Collectors;
 public class BancoPreguntas {
 
     static Random randomNumber = new Random();
-    static Integer randomInt = randomNumber.nextInt(5 - 0) + 0;
+    Integer randomInt = randomNumber.nextInt(5 - 0) + 0;
 
     //public ArrayList<String> opcionesRespuesta = new ArrayList<String>(Arrays.asList("a", "b", "c", "d" ));
     public String[][] opcionesRespuesta = {
