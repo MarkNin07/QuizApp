@@ -4,7 +4,6 @@ import java.util.Scanner;
 
 public class Main {
     static Presentador presentador = new Presentador();
-
     static Reglas reglas = new Reglas();
     static Integer opcionElegida = 1;
 
@@ -19,17 +18,13 @@ public class Main {
                 case 2:
                     reglas.mostrarReglas();
                     break;
-                case 3:
-                    System.out.println("Ver historial");
-                    presentador.getHistorialUsuarios();
-                    break;
                 default:
-                case 4:
+                case 3:
                     System.exit(0);
                     break;
             }
 
-        } while (!presentador.getTerminarJuego());
+        } while (presentador.getTerminarJuego() == false);
     }
 
     public static void main(String[] args) {

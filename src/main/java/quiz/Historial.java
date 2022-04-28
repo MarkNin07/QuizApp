@@ -17,9 +17,12 @@ public class Historial {
       }
 
       public void mostrarUsuarios() {
-          for (Usuario jugador : listaDeJugadores) {
-              System.out.println(jugador.getNombreUsuario() + " " + jugador.getPuntaje());
+          System.out.println("-----------------------------");
+          System.out.println("Historial:");
+          for (Usuario usuario : listaDeJugadores) {
+              System.out.println(usuario.getNombreUsuario() + " " + usuario.getPuntaje() + " " + usuario.getEstado());
           }
+          System.out.println("-----------------------------");
       }
 
 

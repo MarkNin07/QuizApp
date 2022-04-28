@@ -1,13 +1,10 @@
 package quiz;
 
 public class Usuario {
-    //private final String nombreUsuario;
+
     private String nombreUsuario;
     private Integer puntaje = 0;
-
-    /*public Usuario(String nombreUsuario){
-        this.nombreUsuario = nombreUsuario;
-    }*/
+    private EstadoUsuario estado;
 
     public void setNombreUsuario(String nombreUsuario){
         this.nombreUsuario = nombreUsuario;
@@ -23,5 +20,13 @@ public class Usuario {
 
     public Integer getPuntaje() {
         return this.puntaje;
+    }
+
+    public void setEstado(EstadoUsuario estado) {
+        this.estado = estado;
+    }
+
+    public EstadoUsuario getEstado() {
+        return estado;
     }
 }

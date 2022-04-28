@@ -1,13 +1,10 @@
 package quiz;
 
-import java.util.ArrayList;
-
 public class Pregunta {
 
     private Integer ronda;
     private String enunciado;
     private String[] opcionesRespuesta;
-    //private ArrayList <String> opcionesRespuesta;
     private String respuestaCorrecta;
 
     public Pregunta(Integer ronda, String enunciado, String[] opcionesRespuesta, String respuestaCorrecta){
@@ -24,16 +21,6 @@ public class Pregunta {
     public String getEnunciado() {
         return enunciado;
     }
-
-
-    /*public String[] getOpcionesRespuesta() {
-        return opcionesRespuesta;
-    }*/
-
-    /*
-    public ArrayList<String> getOpcionesRespuesta() {
-        return opcionesRespuesta;
-    } */
 
     public String getRespuestaCorrecta() {
         return respuestaCorrecta;
