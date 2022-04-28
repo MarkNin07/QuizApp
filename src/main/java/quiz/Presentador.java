@@ -1,7 +1,5 @@
 package quiz;
 
-import javax.swing.undo.AbstractUndoableEdit;
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Presentador {
@@ -12,15 +10,12 @@ public class Presentador {
     private Boolean terminarJuego = false;
     private Historial historial = new Historial();
     private Usuario usuario = new Usuario();
-    private Boolean usuarioRetirado = false;
+//    private Boolean usuarioRetirado = false;
+//    private Boolean seHaEquivocado = false;
 
     private String solicitarDato(String mensaje){
         System.out.println(mensaje);
         return this.obtenerInput.nextLine();
-    }
-
-    public void iniciarAplicacion(){
-        this.menu.mostrarMenuBienvenida();
     }
 
     public String solicitarDatos() {
@@ -49,13 +44,14 @@ public class Presentador {
     }
 
     public void iniciarJuego(){
-        //BancoPreguntas bancoPreguntas = new BancoPreguntas();
-        //Pregunta preguntaElegida;
-        boolean deseaContinuar = true;
+        Boolean deseaContinuar = true;
+        Boolean usuarioRetirado = false;
+        Boolean seHaEquivocado = false;
 
         for(int ronda = 1 ; ronda <= this.cantidadRondas; ronda++){
             BancoPreguntas bancoPreguntas = new BancoPreguntas();
             Pregunta preguntaElegida;
+
             preguntaElegida = bancoPreguntas.obtenerPregunta(ronda);
             this.menu.mostrarMenuPregunta(preguntaElegida);
 
@@ -67,6 +63,7 @@ public class Presentador {
                 System.out.println("Ha perdido, su premio es: " + this.usuario.getPuntaje());
                 this.usuario.setEstado(EstadoUsuario.HA_PERDIDO);
                 this.terminarJuego = true;
+                seHaEquivocado = true;
                 this.historial.agregarUsuario(this.usuario);
                 this.usuario = new Usuario();
                 break;
@@ -87,14 +84,14 @@ public class Presentador {
                 System.out.println("Su premio de retiro es: " + this.usuario.getPuntaje());
                 this.usuario.setEstado(EstadoUsuario.SE_HA_RETIRADO);
                 this.terminarJuego = true;
-                this.usuarioRetirado = true;
+                usuarioRetirado = true;
                 this.historial.agregarUsuario(this.usuario);
                 this.usuario = new Usuario();
                 break;
             }
         }
 
-        if (this.usuarioRetirado == false){
+        if (!usuarioRetirado && !seHaEquivocado){
             this.terminarJuego = true;
             System.out.println("El premio acumulado es: " + this.usuario.getPuntaje());
             this.usuario.setEstado(EstadoUsuario.HA_GANADO);
@@ -106,10 +103,6 @@ public class Presentador {
 
     public void getHistorialUsuarios() {
         this.historial.mostrarUsuarios();
-    }
-
-    public Integer getPremioAcumulado() {
-        return this.usuario.getPuntaje();
     }
 
     public Boolean getTerminarJuego() {

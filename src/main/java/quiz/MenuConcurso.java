@@ -1,10 +1,6 @@
 package quiz;
 
 public class MenuConcurso implements Menu {
-    @Override
-    public void mostrarMenuBienvenida() {
-        System.out.println("Bienvenido al concurso");
-    }
 
     @Override
     public void mostrarMenuPrincipal() {

@@ -4,7 +4,6 @@ import java.util.Scanner;
 
 public class Main {
     static Presentador presentador = new Presentador();
-
     static Reglas reglas = new Reglas();
     static Integer opcionElegida = 1;
 

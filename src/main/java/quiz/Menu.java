@@ -2,8 +2,6 @@ package quiz;
 
 public interface Menu {
 
-    void mostrarMenuBienvenida();
-
     void mostrarMenuPrincipal();
 
     void mostrarMenuPregunta(Pregunta preguntaElegida);
@@ -12,5 +10,4 @@ public interface Menu {
 
     void menuInicial();
 
-    //void mostrarPantallaTerminarJuego();
 }

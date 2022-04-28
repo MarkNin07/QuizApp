@@ -13,16 +13,14 @@ public class Historial {
       public void agregarUsuario(Usuario usuario) {
           if (usuario.getNombreUsuario() != null) {
               this.listaDeJugadores.add(usuario);
-          }else{
-              System.out.println("Nombre de usuario nulo");
           }
       }
 
       public void mostrarUsuarios() {
           System.out.println("-----------------------------");
           System.out.println("Historial:");
-          for (Usuario jugador : listaDeJugadores) {
-              System.out.println(jugador.getNombreUsuario() + " " + jugador.getPuntaje() + " " + jugador.getEstado());
+          for (Usuario usuario : listaDeJugadores) {
+              System.out.println(usuario.getNombreUsuario() + " " + usuario.getPuntaje() + " " + usuario.getEstado());
           }
           System.out.println("-----------------------------");
       }
