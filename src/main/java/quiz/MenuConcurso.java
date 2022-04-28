@@ -8,11 +8,14 @@ public class MenuConcurso implements Menu {
 
     @Override
     public void mostrarMenuPrincipal() {
+        System.out.println("\n-------------------------");
+        System.out.println("Quiz App");
+        System.out.println("---------------------------");
         System.out.println("Las opciones del juego son: ");
         System.out.println("1. Iniciar juego");
         System.out.println("2. Mostrar reglas del juego");
-        System.out.println("3. Mostrar historial del juego");
-        System.out.println("4. Salir del programa");
+        System.out.println("3. Salir del programa\n");
+
     }
 
     @Override
@@ -32,11 +35,14 @@ public class MenuConcurso implements Menu {
     }
     @Override
     public void menuInicial(){
+
+        System.out.println("\n-----------------");
         System.out.println("Bienvenido!");
-        System.out.println("Ingrese una de las siguientes opciones: ");
-        System.out.println("1. Ingresar usuario: ");
-        System.out.println("2. Ver puntaje historial: ");
+        System.out.println("-----------------");
+        System.out.println("1. Ingresar usuario");
+        System.out.println("2. Ver puntaje historial");
         System.out.println("3. Salir");
+        System.out.println("\nIngrese una de las opciones anteriores: ");
     }
 
     /*@Override

@@ -19,12 +19,8 @@ public class Main {
                 case 2:
                     reglas.mostrarReglas();
                     break;
-                case 3:
-                    System.out.println("Ver historial");
-                    presentador.getHistorialUsuarios();
-                    break;
                 default:
-                case 4:
+                case 3:
                     System.exit(0);
                     break;
             }
